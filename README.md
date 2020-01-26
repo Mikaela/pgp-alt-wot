@@ -6,38 +6,38 @@ subsequent validations.
 
 WoT? [Web Of Trust](https://en.wikipedia.org/wiki/Web_of_trust)
 
-* * * * *
+## Why?
 
-Example use case for this repository is [Tor Browser](https://torproject.org/),
-I need to download it on most of systems and I need to verify it and it's
-painful to verify the PGP key all the time, while I can just verify my own
-fingerprint from paper and see that it has signed the keys. I have done this
-at least twice on Windowses first installing GPG through Chocolatey.
+For example, I use [Tor Browser](https://torproject.org/) everywhere and
+download it directly from their website. They have signed it using GPG (a
+OpenPGP implementation) and to ensure it hasn't been tampered with, I have
+to check that signature and I have two options:
 
-* * * * *
+* I can always [verify the signature](https://support.torproject.org/tbb/how-to-verify-signature/),
+  but that takes time and I would need to verify it from both [support.torproject.org](https://support.torproject.org/tbb/how-to-verify-signature/)
+  and [4bflp2c4tnynnbes.onion](http://4bflp2c4tnynnbes.onion/#how-to-verify-signature).
+  But what if [they were compromised or I was under a MITM attack or lazy and verfied only one version](https://www.qubes-os.org/faq/#should-i-trust-this-website)?
+* (or) I could verify the signing key carefully once, sign (or certify) it
+  by myself and in the future simply verify that my own key is valid (as I
+  have been doing this a few times on the other side of dualbooting and at
+  family).
 
-I don't know if there is point in putting down formal signing requirements,
-but what has been my policy at the time of writing is:
+This second method is also [encouraged by Tails](https://tails.boum.org/install/expert/usb/index.en.html).
 
-NOTE: this section is written from memory so may be inaccurate
+What if I am wrong and trust the wrong key? I think I am less likely to
+trust a wrong key by verifying it carefully and signing it once than
+verifying it separately every time. However if I do sign a wrong key, I can
+always revoke my signature and then publish the key with my revocation
+signature on public keyservers (which I don't usually do, while I cannot
+control what people do with the signatures from this repository).
 
-* friends - knowing for a long time through various connections and seeing
-  at times seeing IDs (or visiting both directions) and otherwise having
-  so deep relationship that lying about identity wouldn't be easily possible
-* privacytools - confirmed from the people themselves, their websites,
-  privacytools.io (WKD in git) and similar.
-* software - used their verification instructions (of varying strength)
-    * keepassxc.asc  mullvad.asc  tails.asc  tor-browser-developers.asc  yggdrasil.asc
-    * keepassxc - checked their website through normal and Tor Browser
-    * mullvad - checked their website and onion
-    * tails - followed their verification instructions (including checking
-      that it's signed by a Debian developer)
-    * tor-browser - followed their checking instructions
-    * yggdrasil - checked their website and comitted apt repo adding to git
+## Inclusion policy
 
-* * * * *
+* I am reasonably certain that the key belongs to whom it claims to belong
+  to or I trust the key to belong to whomever it belongs to.
+* I have some need of the key or have attended keysigning party with the
+  key owner.
 
-TODO:
+## See also
 
-* add links to the previous section
-* add OnionShare?
+* [Qubes OS: On Digital Signatures and Key Verification](https://www.qubes-os.org/security/verifying-signatures/)
