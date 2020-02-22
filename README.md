@@ -37,6 +37,8 @@ control what people do with the signatures from this repository).
   to or I trust the key to belong to whomever it belongs to.
 * I have some need of the key or have attended keysigning party with the
   key owner.
+* `me.asc` is just my key and place where I try to keep all signatures it
+  has received.
 
 ## See also
 
