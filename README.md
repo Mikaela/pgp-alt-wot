@@ -50,6 +50,11 @@ control what people do with the signatures from this repository).
   * [Artemis' verify page](https://artemislena.eu/services/verify.html)
   * [Jonah Aragon's Third Party Public Keys page](https://jonaharagon.com/verify/)
 
+## Mirrors
+
+* main: [git.blesmrt.net/Mikaela/pgp-alt-wot](https://gitea.blesmrt.net/mikaela/pgp-alt-wot/)
+* [git.piraattipuolue.fi/Mikaela/pgp-alt-wot](https://git.piraattipuolue.fi/mikaela/pgp-alt-wot)
+
 ## See also
 
 * [Qubes OS: On Digital Signatures and Key Verification](https://www.qubes-os.org/security/verifying-signatures/)
