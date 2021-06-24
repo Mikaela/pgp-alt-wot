@@ -58,3 +58,5 @@ control what people do with the signatures from this repository).
 ## See also
 
 * [Qubes OS: On Digital Signatures and Key Verification](https://www.qubes-os.org/security/verifying-signatures/)
+* [Finnish Digital and Population Services Agency certificate search](https://dvv.fineid.fi/certificate-search)
+  * S/MIME, not OpenPGP though
