@@ -48,7 +48,6 @@ control what people do with the signatures from this repository).
   a good place too especially when using together with official websites.
 * Some people have similar projects or webpages for this purpose
   * [Artemis' verify page](https://artemislena.eu/services/verify.html)
-  * [Jonah Aragon's Third Party Public Keys page](https://jonaharagon.com/verify/)
 
 ## Mirrors
 
