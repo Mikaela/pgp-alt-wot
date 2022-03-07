@@ -53,6 +53,7 @@ control what people do with the signatures from this repository).
 
 * main: [git.blesmrt.net/Mikaela/pgp-alt-wot](https://gitea.blesmrt.net/mikaela/pgp-alt-wot/)
 * [git.piraattipuolue.fi/Mikaela/pgp-alt-wot](https://git.piraattipuolue.fi/mikaela/pgp-alt-wot)
+* [git.com.de/Mikaela/pgp-alt-wot](https://git.com.de/mikaela/pgp-alt-wot) ([onion](http://gitea.qzzf2qcfbhievvs5nzkccuwddroipy62qjocqtmgcgh75vd6w57m7yad.onion/Mikaela/pgp-alt-wot))
 
 ## See also
 
