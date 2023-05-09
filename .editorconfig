@@ -8,5 +8,7 @@ charset = utf-8
 indent_style = tab
 indent_size = tab
 
-[*.{markdown,md}]
+[*.{markdown,md,yaml}]
 trim_trailing_whitespace = false
+indent_style = space
+indent_size = 2
