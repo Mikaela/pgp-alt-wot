@@ -1,0 +1,13 @@
+# Ban dotfiles except
+.*
+!.editorconfig
+!.gitattributes
+!.gitignore
+!.gnupg
+!.pre-commit-config.yaml
+!.ssh
+# pre-commit
+node_modules/
+
+# symlinks, paws off
+me.asc
