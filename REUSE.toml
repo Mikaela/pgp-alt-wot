@@ -1,0 +1,7 @@
+version = 1
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Aminda Suomalainen <suomalainen@aminda.eu>"
+SPDX-License-Identifier = "CC0-1.0"

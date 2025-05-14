@@ -1,44 +1,74 @@
 ci:
-  # Forĝejo/Gitea mirrors will autoclose pull requests. This should decrease
-  # the frequency of unnecessary PRs.
-  # https://github.com/pre-commit-ci/issues/issues/83
+  skip: [prettier]
   autoupdate_schedule: quarterly
 
-# Override hook language versions from system defaults
 default_language_version:
-  python: pypy3
+  ruby: ".ruby-version"
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v5.0.0
     hooks:
+      - id: trailing-whitespace
+        args: ["--markdown-linebreak-ext", "md,markdown"]
+      - id: check-yaml
       - id: check-added-large-files
       - id: check-case-conflict
-      - id: check-yaml
       - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-merge-conflict
       - id: check-shebang-scripts-are-executable
+      - id: check-toml
+      - id: check-xml
       - id: destroyed-symlinks
       - id: detect-private-key
-      - id: end-of-file-fixer
       - id: fix-byte-order-marker
-      - id: trailing-whitespace
-        exclude_types: [markdown]
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+        args: [--fix=auto]
+      - id: pretty-format-json
+        args:
+          [
+            --autofix,
+            --indent,
+            "\t",
+            --no-ensure-ascii,
+            --top-keys,
+            "Name,name,domain",
+          ]
+      - id: check-illegal-windows-names
+
+  - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
+    rev: v1.6.1
+    hooks:
+      - id: check-pre-commit-ci-config
 
   - repo: https://github.com/thlorenz/doctoc
     rev: v2.2.0
     hooks:
       - id: doctoc
-        args: [--update-only]
+        args: [--update-only, --notitle]
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v4.0.0-alpha.8"
+  - repo: https://github.com/fsfe/reuse-tool
+    rev: v5.0.2
+    hooks:
+      - id: reuse
+
+  - repo: https://github.com/get-woke/woke
+    rev: "v0.19.0"
+    hooks:
+      - id: woke-from-source
+
+  - repo: local
     hooks:
       - id: prettier
+        name: prettier
+        entry: corepack npx prettier --cache --ignore-unknown --write
+        language: system
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: "2.7.3"
+    rev: "3.2.1"
     hooks:
       - id: editorconfig-checker
         alias: ec
-        # I don't actually care about line lengths as more than a guideline
         args: [-disable-max-line-length]

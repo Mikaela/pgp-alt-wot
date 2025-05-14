@@ -1,0 +1,4 @@
+root = false
+[*]
+indent_style = space
+trim_trailing_whitespace = false
