@@ -7,7 +7,7 @@ default_language_version:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
         args: ["--markdown-linebreak-ext", "md,markdown"]
@@ -50,7 +50,7 @@ repos:
         args: [--update-only, --notitle]
 
   - repo: https://github.com/fsfe/reuse-tool
-    rev: v5.0.2
+    rev: v6.0.0
     hooks:
       - id: reuse
 
@@ -67,7 +67,7 @@ repos:
         language: system
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: "3.2.1"
+    rev: "3.4.0"
     hooks:
       - id: editorconfig-checker
         alias: ec
